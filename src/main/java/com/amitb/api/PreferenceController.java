@@ -8,6 +8,7 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
+import jakarta.inject.Inject;
 
 import javax.validation.Valid;
 
@@ -16,6 +17,7 @@ public class PreferenceController {
 
     private final PreferenceService preferenceService;
 
+    @Inject
     public PreferenceController(PreferenceService preferenceService) {
         this.preferenceService = preferenceService;
     }

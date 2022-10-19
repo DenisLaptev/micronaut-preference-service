@@ -22,24 +22,27 @@ import javax.validation.constraints.NotBlank;
 @Builder
 @Introspected
 @Entity
-@Table(name = "preferences")
+@Table(name = "preference")
 public class Preference {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private int id;
-    @NotBlank
+
     @Column(name = "user_id")
+    @NotBlank
     private int userId;
+
+    @Column(name = "locale")
     @NotBlank
-    @Column
     private String locale;
+
+    @Column(name = "diet")
     @NotBlank
-    @Column
     private String diet;
-    @NotBlank
+
     @Column(name = "notify_off")
+    @NotBlank
     private boolean notifyOff;
 
 }

@@ -1,4 +1,4 @@
-CREATE TABLE `preferences` (
+CREATE TABLE `preference` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
     `user_id` int(11) DEFAULT NULL,
     `locale` varchar(255) DEFAULT NULL,
